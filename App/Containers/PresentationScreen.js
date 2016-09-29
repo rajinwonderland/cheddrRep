@@ -7,11 +7,12 @@ import cheddrTheme from '../Themes/cheddrTheme'
 import HomeFAB from '../Components/HomeFAB'
 import PlaceCard from '../Components/PlaceCard'
 import what from '../Components/Styles/PlaceCardStyle'
+import LocationCard from '../Components/LocationCard'
 
 // Styles
 import styles from './Styles/PresentationScreenStyle'
 var height = Dimensions.get('window').height;
-
+var width = Dimensions.get('window').width;
 console.disableYellowBox = true;
 var mi = 0.000621371;
 
@@ -30,20 +31,21 @@ class PresentationScreen extends React.Component {
   render () {
     return (
       <View style={[styles.mainContainer]}>
-          <PlaceCard
-            address="None"
-            name="Bullshit"
-            iconName="local-convenience-store"
-            distance={176.2122*mi}
-            onPress={() => this.props.navigator.push(Routes.Bullshit)}/>
-          <PlaceCard
-            address="12620 SE 41st Pl"
-            name="Walmart"
+        <ScrollView>
+        <View style={{padding: 15, paddingLeft: 5, flexDirection: 'column', alignSelf: 'center', alignItems: 'flex-start', width: width*.94}}>
+        <Text style={what.title}>nearest account:</Text>
+        </View>
+          <LocationCard
+            address="12620 SE 41st Place"
+            name="Walmart (0.2 mi)"
             iconName="local-convenience-store"
             distance={176.2122*mi}
             onPress={() => this.props.navigator.push(Routes.Mojo)}/>
+          <View style={{padding: 15, paddingLeft: 5, flexDirection: 'column', alignSelf: 'center', alignItems: 'flex-start', width: width*.94}}>
+            <Text style={what.title}>other nearby accounts:</Text>
+          </View>
           <PlaceCard
-            address="1001 6th Ave S"
+            address="1001 6th Ave South"
             name="Big John's Pfi"
             iconName="local-grocery-store"
             distance={356.0183*mi}
@@ -156,6 +158,7 @@ class PresentationScreen extends React.Component {
             iconName="local-grocery-store"
             distance={813.01825*mi}
             onPress={() => this.props.navigator.push(Routes.Greenland)}/>
+        </ScrollView>
         <HomeFAB
           onStats={() => this.props.navigator.push(Routes.RepStats)}
           onSettings={() => this.props.navigator.push(Routes.Settings)}

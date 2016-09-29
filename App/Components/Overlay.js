@@ -24,47 +24,32 @@ class Overlay extends Component {
   render() {
     const sale = 1;
     return(
-        <View style={styles.wrapper}>
+        <View style={[styles.wrapper, this.props.overlayStyle]}>
             <Text style={styles.message}>
               Input your number of units sold
             </Text>
-            <View style={styles.overlay}>
-                <Icon
-                  name='minus'
-                  type='font-awesome'
-                  color='white'
-                  size={36}
-                />
-                <TextInput
-                  onChangeText={this.handleChangeSale}
-                  ref='sale'
-                  style={styles.textInput}
-                  value={sale}
-                  keyboardType='numeric'
-                  returnKeyType='done'
-                  placeholder='1'
-                  placeholderTextColor='#FFB829'
-              />
-
-                <Icon
-                  name='plus'
-                  type='font-awesome'
-                  color='white'
-                  size={36}
-                  onPress={this.addToSale}
-                />
-            </View>
+            <TextInput
+              onChangeText={this.props.onChangeText}
+              ref='sale'
+              style={styles.textInput}
+              value={sale}
+              keyboardType='numeric'
+              returnKeyType='done'
+              placeholder='1'
+              placeholderTextColor='#FFB829'
+          />
             <View style={styles.buttons}>
               <Button
-                raised
+                small
                 title='Cancel'
                 backgroundColor='#B71C1C'
+                onPress={this.props.onCancel}
               />
               <Button
-                raised
+                small
                 title='Complete'
                 backgroundColor='#008650'
-                onPress={this.handleChangeSale}
+                onPress={this.props.onComplete}
               />
             </View>
           </View>
@@ -79,9 +64,8 @@ const styles= StyleSheet.create({
     fontSize: 56,
     marginBottom: 10,
     textAlign: 'center',
-    width: 125,
     height: 100,
-    alignSelf: 'center',
+    alignSelf: 'stretch',
     flexWrap: 'wrap',
     color: '#fff',
     padding: 12
@@ -112,7 +96,7 @@ const styles= StyleSheet.create({
   },
   message: {
     color: '#fff',
-    fontSize: 20,
+    fontSize: 18,
     fontWeight: '600',
     fontFamily: 'HelveticaNeue',
   }

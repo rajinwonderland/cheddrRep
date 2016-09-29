@@ -4,6 +4,7 @@ import {
   TouchableOpacity,
   Text,
   StyleSheet,
+  Dimensions
 } from 'react-native'
 import {CardItem, } from 'native-base'
 import ResponsiveImage from 'react-native-responsive-image'
@@ -13,6 +14,8 @@ import TieredQuickView from './TieredQuickView'
 import ItemTitle from './ItemTitle'
 import cheddrTheme from '../Themes/cheddrTheme'
 import Images from '../Themes/Images'
+
+var width = Dimensions.get('window').width;
 
 class TieredItem extends Component {
   constructor(props) {
@@ -87,13 +90,13 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
   },
   responsiveImage: {
-    width: 300,
+    width: width*.94,
     height: 200,
     alignSelf: 'center',
     resizeMode: 'cover',
   },
   responsiveImage2: {
-    width: 300,
+    width: width*.94,
     height: 75,
     alignSelf: 'center',
   },

@@ -219,8 +219,8 @@ export default new class Routes {
       title: 'Accounts',
       component: require('../Containers/PresentationScreen').default,
       customConfiguration: Transitions.modal,
-      leftButton: 'HAMBURGER'
-
+      leftButton: 'HAMBURGER',
+      rightButton: 'SEARCH'
     }
   }
 

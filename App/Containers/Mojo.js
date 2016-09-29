@@ -8,10 +8,7 @@ import { Metrics } from '../Themes'
 import Icon from 'react-native-vector-icons/FontAwesome'
 import Animatable from 'react-native-animatable'
 import PlaceInfo from '../Components/PlaceInfo'
-import ItemsList from '../Components/ItemsList'
-import ItemCard from '../Components/ItemCard'
-import TieredCard from '../Components/TieredCard'
-import IncentiveCard from '../Components/IncentiveCard'
+import IncentiveContainer from '../Components/IncentiveContainer'
 
 // Styles
 import styles from './Styles/MojoStyle'
@@ -77,7 +74,17 @@ class Mojo extends React.Component {
           name="Walmart"
           iconName="local-convenience-store"
         />
-        <IncentiveCard />
+        <IncentiveContainer
+          itemTitle='24 oz cap can, 12 pk, spring water'
+          itemReward='$0.25 / Case'
+          itemPhoto={require('../Images/noahsWater.png')}
+         />
+          <IncentiveContainer
+            itemTitle='12 pack, 11.1 fl oz cartons' itemReward='$1.00 / Case' itemPhoto={require('../Images/vitaCoco.png')}/>
+          <IncentiveContainer
+            itemTitle='Delicious IPA, 6pk, 12oz' itemPhoto={require('../Images/stoneIpa.png')} itemReward='$1.00 / Case (1-50)'/>
+          <IncentiveContainer
+            itemTitle= 'Sparkling Ice Mixed Pack, 170z, 18pk' itemPhoto= {require('../Images/iceCase.png')} itemReward='$0.25 / Case'/>
       </ScrollView>
     )
   }

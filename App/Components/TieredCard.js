@@ -5,6 +5,7 @@ import {
   Image,
   TouchableOpacity,
   StyleSheet,
+  Dimensions
 } from 'react-native'
 import {Container, Button, Header, Content, Title, Text, Card, CardItem, List, ListItem} from 'native-base';
 import ResponsiveImage from 'react-native-responsive-image'
@@ -13,6 +14,8 @@ import cardTheme from '../Themes/cardTheme'
 import Icon from 'react-native-vector-icons/MaterialIcons'
 import FAB from './FAB'
 import TieredItem from './TieredItem'
+
+var width = Dimensions.get('window').width;
 
 class TieredCard extends Component {
   constructor(props) {
@@ -57,7 +60,7 @@ const styles = StyleSheet.create({
     borderColor: 'transparent',
     justifyContent: 'flex-start',
     alignSelf: 'center',
-    width: 300,
+    width: width*.94,
     borderRadius: 1,
     shadowColor: 'rgba(0,0,0,0.24)',
     shadowOpacity: 0.8,
