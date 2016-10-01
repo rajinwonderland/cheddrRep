@@ -7,7 +7,6 @@ import {
 } from 'react-native'
 import {CardItem } from 'native-base'
 import FAB from './FAB'
-import ItemRecordSale from './ItemRecordSale'
 import ItemQuickView from './ItemQuickView'
 import cheddrTheme from '../Themes/cheddrTheme'
 import { Icon } from 'react-native-elements'
@@ -21,6 +20,8 @@ class ItemTitle extends Component {
     this.state = {
       expanded: false,
       add: false,
+      input: false,
+      complete: false,
     }
 
 
@@ -29,25 +30,22 @@ class ItemTitle extends Component {
   render(){
     return (
       <View>
-         {this.state.add ? <ItemRecordSale itemName={this.props.itemName} itemReward={this.props.itemReward}/> :
           <CardItem style={styles.cardItem}>
               <View style={styles.textWrapper}>
-
                 <Text style={styles.title}>
                     {this.props.itemName}
                 </Text>
                 <Text style={styles.subtitle}>{this.props.itemReward}</Text>
             </View>
             <Icon
-              raised
-              size={15}
-              containerStyle={{backgroundColor: '#008650'}}
-              name={this.state.add ? 'done' : 'add'}
-              color={'white'}
-              onPress={() => {
-                this.setState({add: !this.state.add})}}/>
+                raised
+                name='hashtag'
+                type='font-awesome'
+                color={this.props.iconColor}
+                containerStyle={[{borderColor: '#2479BD', borderWidth: 1.5},this.props.containerStyle]}
+                onPress={this.props.onPress}
+            />
           </CardItem>
-          }
         </View>
 
       );

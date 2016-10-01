@@ -11,6 +11,7 @@ import PieChart from '../Components/RepStats/PieChart'
 import CircularProgress from '../Components/RepStats/CircularProgress'
 import CashEarned from '../Components/RepStats/CashEarned'
 import Qualifier from '../Components/RepStats/Qualifier'
+import StatsSlider from '../Components/StatsSlider'
 
 // Styles
 import styles from './Styles/RepStatsStyle'
@@ -68,10 +69,9 @@ class RepStats extends React.Component {
 
   render () {
     return (
-      <ScrollView style={[styles.mainContainer, {height: this.state.visibleHeight}]}>
-        <CashEarned/>
-        <Qualifier/>
-      </ScrollView>
+      <View style={[styles.mainContainer, {height: this.state.visibleHeight}]}>
+        <StatsSlider />
+      </View>
     )
   }
 }

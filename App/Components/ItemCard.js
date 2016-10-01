@@ -16,6 +16,7 @@ import FAB from './FAB'
 import ItemQuickView from './ItemQuickView'
 import ItemRecordSale from './ItemRecordSale'
 import ItemMain from './ItemMain'
+import Overlay from './Overlay'
 
 var width = Dimensions.get('window').width;
 
@@ -26,6 +27,8 @@ class ItemCard extends Component {
     this.state = {
       expanded: false,
       add: false,
+      complete: false,
+      input: false,
     }
 
 
@@ -34,18 +37,39 @@ class ItemCard extends Component {
 
   render() {
     return (
-           <View style={{backgroundColor: 'transparent', margin: 10,}}>
-        <Card theme={cardTheme} style={styles.cardWrapper}>
-          <ItemMain itemPhoto={this.props.itemPhoto}
-          brand={this.props.brand}
-          itemName={this.props.itemName}
-          description={this.props.description}
-          rewardType={this.props.rewardType}
-          qualifier={this.props.qualifier}
-          dateRange={this.props.dateRange}
-          itemReward={this.props.itemReward}
-          reward1={this.props.itemReward}/>
-          </Card>
+        <View style={{backgroundColor: 'transparent', margin: 10}}>
+          <Card theme={cardTheme} style={styles.cardWrapper}>
+              <ItemMain itemPhoto={this.props.itemPhoto}
+                  brand={this.props.brand}
+                  itemName={this.props.itemName}
+                  description={this.props.description}
+                  rewardType={this.props.rewardType}
+                  qualifier={this.props.qualifier}
+                  dateRange={this.props.dateRange}
+                  itemReward={this.props.itemReward}
+                  reward1={this.props.itemReward}
+                  onPress={() => {
+                    this.setState({input: !this.state.input})}
+                  }
+                  iconColor={this.state.complete ? '#fff' : '#2479BD'}
+                  containerStyle={{backgroundColor: this.state.complete ? '#2479BD' :'#fff'}}/>
+            </Card>
+            {this.state.input ?
+                <Overlay
+                  onComplete={() => {
+                      this.setState({
+                        complete: !this.state.complete,
+                        input: !this.state.input
+                      })
+                    }
+                  }
+                  onCancel={() => {
+                    this.setState({input: !this.state.input})}
+                  }
+                />
+            :
+              <View/>
+            }
        </View>
 
     );

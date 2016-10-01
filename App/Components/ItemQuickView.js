@@ -82,7 +82,7 @@ const styles = StyleSheet.create({
     color: '#424242'
   },
   subtitle: {
-    fontSize: 10,
+    fontSize: 12,
     color: '#555'
   },
   incentiveButton: {

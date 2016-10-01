@@ -159,11 +159,6 @@ class PresentationScreen extends React.Component {
             distance={813.01825*mi}
             onPress={() => this.props.navigator.push(Routes.Greenland)}/>
         </ScrollView>
-        <HomeFAB
-          onStats={() => this.props.navigator.push(Routes.RepStats)}
-          onSettings={() => this.props.navigator.push(Routes.Settings)}
-          onSearch={() => this.props.navigator.push(Routes.SearchAccounts)}
-        />
       </View>
     )
   }

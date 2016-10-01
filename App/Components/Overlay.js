@@ -1,6 +1,7 @@
 import React, {Component} from 'react'
 import { View, Image, Text, StyleSheet, Dimensions, Platform, TextInput } from 'react-native'
 import { Card, ListItem, Button, Icon, } from 'react-native-elements'
+import KeyboardSpacer from 'react-native-keyboard-spacer';
 
 var width = Dimensions.get('window').width;
 var height = Dimensions.get('window').height;
@@ -61,8 +62,9 @@ export default Overlay
 
 const styles= StyleSheet.create({
   textInput: {
-    fontSize: 56,
-    marginBottom: 10,
+    fontSize: 48,
+    marginBottom: 0,
+    marginTop: 0,
     textAlign: 'center',
     height: 100,
     alignSelf: 'stretch',
@@ -82,21 +84,22 @@ const styles= StyleSheet.create({
     justifyContent: 'space-between',
   },
   wrapper: {
-    flexDirection: 'column',
     position: 'absolute',
     top: -8,
-    bottom: 0,
     left: 0,
     right: 0,
-    justifyContent: 'center',
+    bottom: 0,
     backgroundColor: 'rgba(0,0,0,0.75)',
-    width: width*1,
+    flexDirection: 'column',
+    justifyContent: 'center',
     alignSelf: 'center',
     alignItems: 'center',
   },
   message: {
     color: '#fff',
-    fontSize: 18,
+    fontSize: 12,
+    marginBottom: 0,
+    marginTop: 10,
     fontWeight: '600',
     fontFamily: 'HelveticaNeue',
   }

@@ -5,7 +5,7 @@ import styles from './Styles/DrawerContentStyle'
 import Routes from '../Navigation/Routes'
 import drawerStyles from './Styles/DrawerButtonStyles'
 import TextButton from './TextButton'
-import { Icon } from 'react-native-elements'
+import { Button, Icon } from 'react-native-elements'
 
 var width = Dimensions.get('window').width;
 var height = Dimensions.get('window').height;
@@ -24,10 +24,11 @@ class DrawerContent extends React.Component {
     return (
         <View style={{flex:2, flexDirection: 'column',  justifyContent: 'center', marginTop: 64, padding: 20}}>
           <ScrollView>
-            <DrawerButton img={require("../Images/some-black-guy.png")} textStyles={drawerStyles.text} text='Matt Zimmer' onPress={this.handlePressLogin} />
+            <DrawerButton img={require("../Images/some-black-guy.png")} textStyles={drawerStyles.text} text='Matt Zimmer' onPress={this.handlePressSettings} />
             <DrawerButton img={require("../Images/nearby-cheddr.png")} textStyles={drawerStyles.text} text='Nearby' onPress={this.handlePressPresentationScreen}/>
             <DrawerButton img={require("../Images/statsWithOval.png")} textStyles={drawerStyles.text} text='Stats' onPress={this.handlePressRepStats} />
-            <DrawerButton img={require("../Images/gearWithOval.png")} textStyles={drawerStyles.text} text='Settings' onPress={this.handlePressSettings} />
+            <DrawerButton img={require("../Images/gearWithOval.png")} textStyles={drawerStyles.text} text='Logout' onPress={this.handlePressLogin} />
+            <Button raised title='Search' onPress={this.handlePressSearchAccounts} />
           </ScrollView>
         </View>
     )

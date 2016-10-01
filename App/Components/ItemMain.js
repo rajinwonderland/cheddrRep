@@ -9,7 +9,6 @@ import {
 import {CardItem, } from 'native-base'
 import ResponsiveImage from 'react-native-responsive-image'
 import FAB from './FAB'
-import ItemRecordSale from './ItemRecordSale'
 import ItemQuickView from './ItemQuickView'
 import ItemTitle from './ItemTitle'
 import cheddrTheme from '../Themes/cheddrTheme'
@@ -36,10 +35,7 @@ class ItemMain extends Component {
           onPress={() => {
             this.setState({expanded: !this.state.expanded})}
           }
-          >
-
-
-
+      >
           {
             this.state.expanded ?
 
@@ -52,18 +48,24 @@ class ItemMain extends Component {
               <ResponsiveImage style={styles.responsiveImage2} source={(this.props.itemPhoto)} initHeight="241.18" initWidth="325"></ResponsiveImage>
             </CardItem>
          }
-           <ItemTitle itemName={this.props.itemName}
-           itemReward={this.props.itemReward}/>
+           <ItemTitle
+              itemName={this.props.itemName}
+              itemReward={this.props.itemReward}
+              onPress={this.props.onPress}
+              iconColor={this.props.iconColor}
+              containerStyle={this.props.containerStyle}
+          />
           </TouchableOpacity>
         {
               this.state.expanded ?
-               <ItemQuickView brand={this.props.brand}
-               description={this.props.description}
-               rewardType={this.props.rewardType}
-               qualifier={this.props.qualifier}
-               dateRange={this.props.dateRange}
-               reward1={this.props.itemReward}/>
-                :
+               <ItemQuickView
+                 brand={this.props.brand}
+                 description={this.props.description}
+                 rewardType={this.props.rewardType}
+                 qualifier={this.props.qualifier}
+                 dateRange={this.props.dateRange}
+                 reward1={this.props.itemReward}/>
+              :
                 undefined
         }
         </View>

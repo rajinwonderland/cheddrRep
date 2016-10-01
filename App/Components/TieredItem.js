@@ -52,8 +52,12 @@ class TieredItem extends Component {
               <ResponsiveImage style={styles.responsiveImage2} source={(this.props.itemPhoto)} initHeight="241.18" initWidth="325"></ResponsiveImage>
             </CardItem>
          }
-           <ItemTitle itemName={this.props.itemName}
-           itemReward={this.props.itemReward}/>
+           <ItemTitle
+             itemName={this.props.itemName}
+             itemReward={this.props.itemReward}
+             onPress={this.props.onPress}
+             iconColor={this.props.iconColor}
+             containerStyle={this.props.containerStyle} />
           </TouchableOpacity>
         {
               this.state.expanded ?
