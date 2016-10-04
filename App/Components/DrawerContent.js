@@ -24,11 +24,10 @@ class DrawerContent extends React.Component {
     return (
         <View style={{flex:2, flexDirection: 'column',  justifyContent: 'center', marginTop: 64, padding: 20}}>
           <ScrollView>
-            <DrawerButton img={require("../Images/some-black-guy.png")} textStyles={drawerStyles.text} text='Matt Zimmer' onPress={this.handlePressSettings} />
+            <DrawerButton img={require("../Images/profile.png")} textStyles={drawerStyles.text} text='Matt Zimmer' onPress={this.handlePressSettings} />
             <DrawerButton img={require("../Images/nearby-cheddr.png")} textStyles={drawerStyles.text} text='Nearby' onPress={this.handlePressPresentationScreen}/>
             <DrawerButton img={require("../Images/statsWithOval.png")} textStyles={drawerStyles.text} text='Stats' onPress={this.handlePressRepStats} />
-            <DrawerButton img={require("../Images/gearWithOval.png")} textStyles={drawerStyles.text} text='Logout' onPress={this.handlePressLogin} />
-            <Button raised title='Search' onPress={this.handlePressSearchAccounts} />
+            <Button raised title='Logout' buttonStyle={{backgroundColor: '#2479BD'}} onPress={this.handlePressLogin} />
           </ScrollView>
         </View>
     )

@@ -32,6 +32,7 @@
     "react-native": "^0.28.0",
     "react-native-action-button": "^1.1.11",
     "react-native-animatable": "^0.6.0",
+    "react-native-autocomplete-input": "^2.0.0",
     "react-native-chart": "^1.0.8-beta",
     "react-native-circular-progress": "0.0.7",
     "react-native-device-info": "^0.9.3",

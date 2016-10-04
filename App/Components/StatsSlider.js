@@ -4,6 +4,7 @@ import {Card, Button, SocialIcon, Icon} from 'react-native-elements'
 import Swiper from 'react-native-swiper'
 import CashEarned from './RepStats/CashEarned'
 import Qualifier from './RepStats/Qualifier'
+import StatsIncentive from '../Components/StatsIncentive'
 
 var width = Dimensions.get('window').width;
 var height = Dimensions.get('window').height;
@@ -67,18 +68,15 @@ class StatsSlider extends Component {
            <Swiper style={styles.wrapper} infinite={false} showsButtons={false} dot={<Icon name='circle'  type='font-awesome' color='rgba(0,0,0,0.5)' containerStyle={{marginBottom: 30}}/>} activeDot={<Icon name='circle' type='font-awesome' color='#008650' containerStyle={{marginBottom: 30}}/>} >
              <View style={styles.slide1}>
               <Text style={{fontFamily: 'HelveticaNeue', fontWeight: '600', textAlign: 'center', color: '#424242', }}>This Month</Text>
-              <CashEarned/>
-              <Qualifier/>
+              <StatsIncentive/>
              </View>
              <View style={styles.slide2}>
              <Text style={{fontFamily: 'HelveticaNeue', fontWeight: '600', alignSelf: 'center', textAlign: 'center', color: '#424242', }}>Last Month</Text>
-             <CashEarned/>
-             <Qualifier/>
+             <StatsIncentive/>
              </View>
              <View style={styles.slide3}>
              <Text style={{fontFamily: 'HelveticaNeue', fontWeight: '600', alignSelf: 'center', textAlign: 'center', color: '#424242', }}>Career</Text>
-             <CashEarned/>
-             <Qualifier/>
+             <StatsIncentive/>
              </View>
           </Swiper>
       )

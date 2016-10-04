@@ -19,7 +19,6 @@ export default {
       width: 0,
     },
     width: width*1,
-    zIndex: 0,
   },
   cardItem: {
     flexDirection: "column",
@@ -72,7 +71,6 @@ export default {
       height: 2,
       width: -3,
     },
-    zIndex: 1,
   },
   ListItem: {
     flex: 2,

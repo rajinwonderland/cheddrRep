@@ -2,7 +2,6 @@ import React from 'react'
 import { TouchableOpacity, Text, Image, Dimensions } from 'react-native'
 import styles from './Styles/NavigationStyle'
 import Icon from 'react-native-vector-icons/MaterialIcons'
-import {SearchBar} from 'react-native-elements'
 import { Colors, Metrics, Images } from '../Themes'
 
 // I18n
@@ -44,13 +43,13 @@ export default {
   },
   searchButton (onPressFunction) {
     return(
-      <SearchBar
-        round
-        icon={{color: 'white'}}
-        containerStyle={{backgroundColor: 'transparent', color: 'white', marginRight: 12, width: width*.6, borderTopColor: 'transparent'}}
-        inputStyle={{backgroundColor: 'rgba(0,0,0,0.18)', color: 'white', }}
-        placeholder='search...'
-        placeholderTextColor='white' />
+      <TouchableOpacity onPress={onPressFunction}>
+        <Icon name='search'
+          size={Metrics.icons.small}
+          color={Colors.snow}
+          style={styles.navButtonLeft}
+        />
+      </TouchableOpacity>
     )
   }
 

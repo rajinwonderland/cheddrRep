@@ -12,7 +12,6 @@ export default {
     backgroundColor: (Platform.OS === 'ios' ) ? "transparent" : "#fff",
     borderBottomColor: 'transparent',
     width: width*.8,
-    zIndex: 0,
     marginBottom: 25,
   },
   cardItem: {
@@ -76,7 +75,6 @@ export default {
       height: 2,
       width: -3,
     },
-    zIndex: 1,
   },
   ListItem: {
     flex: 2,

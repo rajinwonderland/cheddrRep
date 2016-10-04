@@ -64,7 +64,7 @@ class ItemCard extends Component {
                     }
                   }
                   onCancel={() => {
-                    this.setState({input: !this.state.input})}
+                    this.setState({input: !this.state.input, complete: !this.state.complete})}
                   }
                 />
             :

@@ -9,6 +9,7 @@ import Icon from 'react-native-vector-icons/FontAwesome'
 import Animatable from 'react-native-animatable'
 import SearchBar from '../Components/SearchBar'
 import TabHeader from '../Components/TabHeader'
+import NewSearch from '../Components/NewSearch'
 
 // Styles
 import styles from './Styles/SearchAccountsStyle'

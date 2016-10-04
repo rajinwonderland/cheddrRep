@@ -41,11 +41,11 @@ class ItemMain extends Component {
 
 
           <CardItem style={styles.imageContainer}>
-             <ResponsiveImage style={styles.responsiveImage} source={this.props.itemPhoto} initHeight="241.18" initWidth="325"></ResponsiveImage>
+             <ResponsiveImage style={styles.responsiveImage} source={this.props.itemPhoto} initHeight="241.18" initWidth="355"></ResponsiveImage>
           </CardItem>
             :
             <CardItem style={styles.imageContainer2}>
-              <ResponsiveImage style={styles.responsiveImage2} source={(this.props.itemPhoto)} initHeight="241.18" initWidth="325"></ResponsiveImage>
+              <ResponsiveImage style={styles.responsiveImage2} source={(this.props.itemPhoto)} initHeight="241.18" initWidth="355"></ResponsiveImage>
             </CardItem>
          }
            <ItemTitle

@@ -151,7 +151,7 @@ class LoginScreen extends React.Component {
             <Button
               raised
               small
-              title="Cancel"
+              title="Register"
               onPress={this.handlePressCancel}
               backgroundColor="#008650"/>
 

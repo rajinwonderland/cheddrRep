@@ -19,7 +19,6 @@ export default {
     elevation: 2,
     marginBottom: 10,
     width: width*.94,
-    zIndex: 0,
   },
   cardItem: {
     flexDirection: "row",
@@ -70,7 +69,6 @@ export default {
       height: 2,
       width: -3,
     },
-    zIndex: 1,
   },
   ListItem: {
     flex: 2,

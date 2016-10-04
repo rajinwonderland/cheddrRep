@@ -24,7 +24,6 @@ export default {
     borderRadius: 1,
     borderBottomColor: 'transparent',
     marginBottom: 10,
-    zIndex: 0,
   },
   menuItem: {
     flexDirection: "row",

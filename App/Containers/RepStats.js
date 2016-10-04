@@ -13,6 +13,7 @@ import CashEarned from '../Components/RepStats/CashEarned'
 import Qualifier from '../Components/RepStats/Qualifier'
 import StatsSlider from '../Components/StatsSlider'
 
+
 // Styles
 import styles from './Styles/RepStatsStyle'
 
